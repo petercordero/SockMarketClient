@@ -15,9 +15,15 @@ function Navbar() {
       <Link to="/">
         <button>Home</button>
       </Link>
+
+      <Link to="/all-socks">
+        <button>See Socks</button>
+      </Link>
  
       {getToken() && (
-        <>      
+        <>      <Link to="/add-sock">
+            <button>List Sock</button>
+        </Link>
           <button onClick={logOutUser}>Logout</button>
           <span>{user && user.name}</span>
         </>
